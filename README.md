@@ -13,8 +13,7 @@
 ```bash
    bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 ```
-放行端口：选择21，然后输入想放行的端口（端口要先放行，不然下面申请证书会报错）</br>
-安装证书：选择15，输入解析好的域名
+
 
 ## 服务器测速脚本<a name="服务器测速脚本"></a>
 
