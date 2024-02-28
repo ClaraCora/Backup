@@ -1,8 +1,13 @@
 ## 目录
 [服务器测速脚本](#服务器测速脚本)
+[X-UI 安装脚本](#X-UI 安装脚本)
 
+## X-UI 安装脚本<a name="X-UI 安装脚本"></a>
 
-
+X-UI 安装脚本
+```bash
+   bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+```
 
 ## 服务器测速脚本<a name="服务器测速脚本"></a>
 
