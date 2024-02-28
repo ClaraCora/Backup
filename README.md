@@ -23,6 +23,10 @@
 ```bash
    bash <(curl -Lso- https://raw.githubusercontent.com/BlueSkyXN/SpeedTestCN/main/superspeed.sh)
 ```
+三网路由回程
+```bash
+   curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bash
+```
 
 ## X-UI 安装脚本<a name="X-UI安装脚本"></a>
 X-UI 安装脚本
