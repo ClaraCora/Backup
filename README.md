@@ -1,4 +1,5 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
+[3X-UI安装](#3X-UI安装)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
 [X-UI 安装脚本](#X-UI安装脚本)</br>
 [Docker安装脚本](#Docker安装脚本)</br>
@@ -7,6 +8,13 @@
 
 
 
+## 3X-UI安装<a name="3X-UI安装"></a>
+3X-UI安装 <a href="https://github.com/MHSanaei/3x-ui">Github源码</a>
+```bash
+   bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
+```
+放行端口：选择21，然后输入想放行的端口（端口要先放行，不然下面申请证书会报错）
+安装证书：选择15，输入解析好的域名
 
 ## 服务器测速脚本<a name="服务器测速脚本"></a>
 
