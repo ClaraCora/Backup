@@ -3,11 +3,17 @@
 [X-UI 安装脚本](#X-UI安装脚本)
 
 ## X-UI 安装脚本<a name="X-UI安装脚本"></a>
-
 X-UI 安装脚本
 ```bash
    bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 ```
+
+## Docker安装脚本<a name="Docker安装脚本"></a>
+Docker安装脚本
+```bash
+   bash <(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.sh)
+```
+
 
 ## 服务器测速脚本<a name="服务器测速脚本"></a>
 
