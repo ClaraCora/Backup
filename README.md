@@ -35,6 +35,7 @@
 ```bash
    curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bash
 ```
+<a href="http://Ping.pe">搬瓦工丢包测试Ping.pe</a>
 
 ## X-UI 安装脚本<a name="X-UI安装脚本"></a>
 X-UI 安装脚本
