@@ -3,5 +3,7 @@
 ```bash
    wget -qO- bench.sh | bash
 ```
-
-测
+或者
+```bash
+   curl -Lso- bench.sh | bash
+```
