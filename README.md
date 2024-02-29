@@ -1,10 +1,24 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
+[ServerStatus安装](#ServerStatus安装)</br>
 [3X-UI安装](#3X-UI安装)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
 [X-UI 安装脚本](#X-UI安装脚本)</br>
 [Docker安装脚本](#Docker安装脚本)</br>
 [巨魔用户屏蔽系统OTA](#巨魔用户屏蔽系统OTA)</br>
 
+## ServerStatus安装<a name="ServerStatus安装"></a>
+ServerStatus安装
+```bash
+wget https://raw.githubusercontent.com/CokeMine/ServerStatus-Hotaru/master/status.sh && chmod +x status.sh
+```
+安装客户端
+```bash
+bash status.sh c
+```
+# 服务端管理菜单
+```bash
+bash status.sh s
+```
 
 
 
