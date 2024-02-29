@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/CokeMine/ServerStatus-Hotaru/master/statu
 ```bash
 bash status.sh c
 ```
-# 服务端管理菜单
+服务端管理菜单
 ```bash
 bash status.sh s
 ```
