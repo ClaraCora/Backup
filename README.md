@@ -62,6 +62,39 @@ Docker安装脚本
    bash <(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.sh)
 ```
 
+## 安装运行Nginx容器:
+```bash
+sudo docker run -d -p 80:80 --name mynginx -v /root/html:/usr/share/nginx/html nginx
+```
+在容器中编辑 Nginx 配置文件：
+```bash
+sudo docker exec -it mynginx /bin/bash
+```
+在容器中执行以下命令：（改域名和目录名）
+```bash
+echo "server {
+    listen 80 default_server;
+    server_name _;
+
+    return 403;
+}
+
+server {
+    listen 80;
+    server_name 域名;
+
+    location / {
+        alias /usr/share/nginx/html/目录名/;
+        index index.html;
+    }
+}" > /etc/nginx/conf.d/mywebsite.conf
+```
+重新加载 Nginx 配置:
+```bash
+nginx -s reload
+```
+
+
 ## 巨魔用户屏蔽系统OTA<a name="巨魔用户屏蔽系统OTA"></a>
 巨魔用户屏蔽系统OTA，将下面命令复制到剪切板，然后使用 Filza 找到 /usr/bin/vm_stat 点击运行，然后粘贴下面命令并回车运行
 ```bash
