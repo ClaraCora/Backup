@@ -1,6 +1,7 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
 [ServerStatus安装](#ServerStatus安装)</br>
 [3X-UI安装](#3X-UI安装)</br>
+[HY2安装](#HY2安装)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
 [X-UI 安装脚本](#X-UI安装脚本)</br>
 [Docker安装脚本](#Docker安装脚本)</br>
@@ -28,7 +29,11 @@ bash status.sh s
 ```bash
    bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 ```
-
+## HY2安装<a name="HY2安装"></a>
+HY2安装 
+```bash
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+```
 
 ## 服务器测速脚本<a name="服务器测速脚本"></a>
 
