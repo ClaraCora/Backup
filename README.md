@@ -4,6 +4,7 @@
 [服务器测速脚本](#服务器测速脚本)</br>
 [X-UI 安装脚本](#X-UI安装脚本)</br>
 [Docker安装脚本](#Docker安装脚本)</br>
+[安装运行Nginx容器](#安装运行Nginx容器)</br>
 [巨魔用户屏蔽系统OTA](#巨魔用户屏蔽系统OTA)</br>
 
 ## ServerStatus安装<a name="ServerStatus安装"></a>
@@ -62,7 +63,7 @@ Docker安装脚本
    bash <(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.sh)
 ```
 
-## 安装运行Nginx容器:
+## 安装运行Nginx容器<a name="安装运行Nginx容器"></a>
 ```bash
 sudo docker run -d -p 80:80 --name mynginx -v /root/html:/usr/share/nginx/html nginx
 ```
