@@ -1,5 +1,6 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
 [ServerStatus安装](#ServerStatus安装)</br>
+[NginxProxyManager反向代理工具](#NginxProxyManager反向代理工具)</br>
 [3X-UI安装](#3X-UI安装)</br>
 [HY2安装](#HY2安装)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
@@ -22,6 +23,26 @@ bash status.sh c
 bash status.sh s
 ```
 
+## Nginx Proxy Manager反向代理工具<a name="NginxProxyManager反向代理工具"></a>
+
+创建 docker-compose.yaml
+```bash
+version: '3'
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'              # 不建议修改端口
+      - '81:81'              # 可以把冒号左边的 81 端口修改成你服务器上没有被占用的端口
+      - '443:443'            # 不建议修改端口
+    volumes:
+      - ./data:/data         # 点号表示当前文件夹，冒号左边的意思是在当前文件夹下创建一个 data 目录，用于存放数据，如果不存在的话，会自动创建
+      - ./letsencrypt:/etc/letsencrypt  # 点号表示当前文件夹，冒号左边的意思是在当前文件夹下创建一个 letsencrypt 目录，用于存放证书，如果不存在的话，会自动创建
+    # network_mode: "host"
+```
+docker-compose up -d
+默认登陆的用户名：admin@example.com 密码：changeme
 
 
 ## 3X-UI安装<a name="3X-UI安装"></a>
