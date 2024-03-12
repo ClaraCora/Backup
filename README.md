@@ -41,7 +41,10 @@ services:
       - ./letsencrypt:/etc/letsencrypt  # 点号表示当前文件夹，冒号左边的意思是在当前文件夹下创建一个 letsencrypt 目录，用于存放证书，如果不存在的话，会自动创建
     # network_mode: "host"
 ```
+安装容器
+```bash
 docker-compose up -d
+```
 默认登陆的用户名：admin@example.com 密码：changeme
 
 
