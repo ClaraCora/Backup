@@ -1,6 +1,6 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
 [ServerStatus安装](#ServerStatus安装)</br>
-[NginxProxyManager反向代理工具](#NginxProxyManager反向代理工具)</br>
+[NginxProxyManager反向代理工具](#NginxProxyManager)</br>
 [3X-UI安装](#3X-UI安装)</br>
 [HY2安装](#HY2安装)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
@@ -23,7 +23,7 @@ bash status.sh c
 bash status.sh s
 ```
 
-## Nginx Proxy Manager反向代理工具<a name="NginxProxyManager反向代理工具"></a>
+## Nginx Proxy Manager反向代理工具<a name="NginxProxyManager"></a>
 
 创建 docker-compose.yaml
 ```bash
