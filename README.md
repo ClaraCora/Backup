@@ -67,6 +67,22 @@ Docker安装脚本
 ```bash
    bash <(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.sh)
 ```
+运行以下命令以下载 Docker Compose 的当前稳定版本：
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+将可执行权限应用于二进制文件：
+```bash
+sudo chmod +x /usr/local/bin/docker-compose
+```
+创建软链：
+```bash
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+```
+测试是否安装成功：
+```bash
+docker-compose version
+```
 
 ## 安装运行Nginx容器<a name="安装运行Nginx容器"></a>
 ```bash
