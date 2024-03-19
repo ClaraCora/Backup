@@ -52,7 +52,7 @@ scrape_configs:
 ```
 上面的配置中，192.168.0.1 是爱快的路由器 IP 地址，192.168.0.100:9222 是 Exporter 容器的地址。
 
-安装Grafana
+安装Grafana （默认 admin  admin）
 ```bash
 docker run -d -p 3000:3000 grafana/grafana-enterprise
 ```
@@ -60,7 +60,7 @@ docker run -d -p 3000:3000 grafana/grafana-enterprise
 ```bash
 http://192.168.0.100:3000/connections/add-new-connection
 ```
-导入模板，库里Grafana模板.json
+导入模板，库里Grafana模板.json  如果显示错误，编辑模块，run queries一下
 
 
 ## NginxProxyManager反向代理工具<a name="NginxProxyManager反向代理工具"></a>
