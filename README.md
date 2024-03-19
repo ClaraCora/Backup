@@ -1,5 +1,6 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
 [ServerStatus安装](#ServerStatus安装)</br>
+[爱快状态监控套装](#爱快状态监控套装)</br>
 [NginxProxyManager反向代理工具](#NginxProxyManager反向代理工具)</br>
 [3X-UI安装](#3X-UI安装)</br>
 [HY2安装](#HY2安装)</br>
@@ -22,6 +23,9 @@ bash status.sh c
 ```bash
 bash status.sh s
 ```
+## 爱快状态监控套装<a name="爱快状态监控套装"></a>
+
+
 
 ## NginxProxyManager反向代理工具<a name="NginxProxyManager反向代理工具"></a>
 
