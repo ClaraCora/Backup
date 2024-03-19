@@ -24,7 +24,43 @@ bash status.sh c
 bash status.sh s
 ```
 ## 爱快状态监控套装<a name="爱快状态监控套装"></a>
+安装iKuai Exporter 
+```bash
+docker run -d -p 9222:9090 -e IK_URL=http://路由器地址 -e IK_USER=用户 -e IK_PWD=密码 \
+  jakes/ikuai-exporter:latest
+```
+安装Prometheus
+```bash
+docker run -d -p 9090:9090 --name=prometheus \
+ -v  /root/prometheus/conf/prometheus.yml:/etc/prometheus/prometheus.yml  \
+prom/prometheus 
+```
+在 Prometheus 的配置文件 prometheus.yml 中增加如下配置：
+```bash
+scrape_configs:
+  - job_name: 'ikuai_exporter'
+    scrape_interval: 2s
+    scrape_timeout: 2s
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+      - target_label: __address__
+        replacement: 192.168.0.100:9222  # exporter.
+    static_configs:
+      - targets:
+          - 192.168.0.1
+```
+上面的配置中，192.168.0.1 是爱快的路由器 IP 地址，192.168.0.100:9222 是 Exporter 容器的地址。
 
+安装Grafana
+```bash
+docker run -d -p 3000:3000 grafana/grafana-enterprise
+```
+连接Prometheus数据库，搜Prometheus，填入 http://192.168.0.100:9090
+```bash
+http://192.168.0.100:3000/connections/add-new-connection
+```
+导入模板，库里Grafana模板.json
 
 
 ## NginxProxyManager反向代理工具<a name="NginxProxyManager反向代理工具"></a>
