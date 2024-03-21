@@ -1,6 +1,7 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
 [ServerStatus安装](#ServerStatus安装)</br>
 [爱快状态监控套装](#爱快状态监控套装)</br>
+[群晖安装哪吒监控](#群晖安装哪吒监控)</br>
 [NginxProxyManager反向代理工具](#NginxProxyManager反向代理工具)</br>
 [3X-UI安装](#3X-UI安装)</br>
 [HY2安装](#HY2安装)</br>
@@ -61,6 +62,16 @@ docker run -d -p 3000:3000 grafana/grafana-enterprise
 http://192.168.0.100:3000/connections/add-new-connection
 ```
 导入模板，库里Grafana模板.json  如果显示错误，编辑模块，run queries一下
+
+## 群晖安装哪吒监控<a name="群晖安装哪吒监控"></a>
+群晖 docker 目录创建 neza 文件夹，里面再创建 data 文件夹，上传库里的config.yaml </br>
+neza 文件夹上传库里的docker-compose.yaml </br>
+参考 docker 安装docker-compose  </br>
+cd 到neza 文件夹  </br>
+安装容器
+```bash
+docker-compose up -d
+```
 
 
 ## NginxProxyManager反向代理工具<a name="NginxProxyManager反向代理工具"></a>
