@@ -67,7 +67,7 @@ http://192.168.0.100:3000/connections/add-new-connection
 群晖 docker 目录创建 neza 文件夹，里面再创建 data 文件夹，上传库里的config.yaml </br>
 neza 文件夹上传库里的docker-compose.yaml </br>
 参考 docker 安装docker-compose  </br>
-cd 到neza 文件夹  </br>
+ssh 到群晖sudo su 后， cd 到neza 文件夹  </br>
 安装容器
 ```bash
 docker-compose up -d
