@@ -1,0 +1,12 @@
+debug: false
+httpport: 80
+grpcport: 5555
+oauth2:
+  type: "github"      # oauth2 gitee/github
+  admin: "ClaraCora"    # admin username list
+  clientid: "xxxxx"
+  clientsecret: "xxxxx"
+site:
+  brand: "CC | 监测页面"
+  cookiename: "nezha-dashboard" 
+  theme: "default"
