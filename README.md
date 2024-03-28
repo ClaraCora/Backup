@@ -1,4 +1,5 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
+[检测VPS内存是否超售](#检测VPS内存是否超售)</br>
 [ServerStatus安装](#ServerStatus安装)</br>
 [爱快状态监控套装](#爱快状态监控套装)</br>
 [群晖安装哪吒监控](#群晖安装哪吒监控)</br>
@@ -11,6 +12,11 @@
 [安装运行Nginx容器](#安装运行Nginx容器)</br>
 [巨魔用户屏蔽系统OTA](#巨魔用户屏蔽系统OTA)</br>
 
+
+## 检测VPS内存是否超售<a name="检测VPS内存是否超售"></a>
+```bash
+curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
+```
 ## ServerStatus安装<a name="ServerStatus安装"></a>
 ServerStatus安装
 ```bash
