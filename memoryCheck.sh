@@ -26,7 +26,7 @@ echo ""
 if lsmod | grep virtio_balloon > /dev/null; then
     echo -e "\033[31mballoon超售!\033[0m"
     echo "存在virtio_balloon模块，使用气球驱动Balloon超售内存"
-    sudo rmmod virtio_balloon
+    echo "sudo rmmod virtio_balloon"
 else
     echo "未使用气球驱动Balloon超售，不存在virtio_balloon模块"
 fi
