@@ -6,6 +6,7 @@
 [NginxProxyManager反向代理工具](#NginxProxyManager反向代理工具)</br>
 [3X-UI安装](#3X-UI安装)</br>
 [HY2安装](#HY2安装)</br>
+[SNELL安装](#SNELL安装)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
 [X-UI 安装脚本](#X-UI安装脚本)</br>
 [Docker安装脚本](#Docker安装脚本)</br>
@@ -115,6 +116,12 @@ HY2安装
 ```bash
 wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
 ```
+
+## SNELL安装<a name="SNELL安装"></a>
+```bash
+wget -O snell.sh --no-check-certificate https://raw.githubusercontent.com/getsomecat/Snell/master/snell_new.sh && chmod +x snell.sh && ./snell.sh
+```
+
 
 ## 服务器测速脚本<a name="服务器测速脚本"></a>
 
