@@ -142,6 +142,12 @@ wget -O snell.sh --no-check-certificate https://raw.githubusercontent.com/getsom
 ```bash
    curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bash
 ```
+
+流媒体检测
+```bash
+   bash <(curl -L -s media.ispvps.com)
+```
+
 <a href="http://Ping.pe">搬瓦工丢包测试Ping.pe</a>
 
 ## X-UI 安装脚本<a name="X-UI安装脚本"></a>
