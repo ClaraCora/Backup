@@ -119,7 +119,7 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-
 
 ## SNELL安装<a name="SNELL安装"></a>
 ```bash
-wget -O snell.sh --no-check-certificate https://raw.githubusercontent.com/getsomecat/Snell/master/snell_new.sh && chmod +x snell.sh && ./snell.sh
+wget -O snell.sh --no-check-certificate https://git.io/Snell.sh && chmod +x snell.sh && ./snell.sh
 ```
 
 
