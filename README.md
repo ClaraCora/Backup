@@ -145,9 +145,12 @@ wget -O snell.sh --no-check-certificate https://git.io/Snell.sh && chmod +x snel
 
 流媒体检测
 ```bash
-   bash <(curl -L -s media.ispvps.com)
+bash <(curl -L -s media.ispvps.com)
 ```
-
+流媒体（奈飞&迪斯尼等）一键修改解锁DNS脚本
+```bash
+wget https://raw.githubusercontent.com/Jimmyzxk/DNS-Alice-Unlock/refs/heads/main/dns-unlock.sh && bash dns-unlock.sh
+```
 <a href="http://Ping.pe">搬瓦工丢包测试Ping.pe</a>
 
 ## X-UI 安装脚本<a name="X-UI安装脚本"></a>
