@@ -140,7 +140,7 @@ wget -O snell.sh --no-check-certificate https://git.io/Snell.sh && chmod +x snel
 ```
 三网路由回程
 ```bash
-   curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bash
+curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sSf | sh
 ```
 
 流媒体检测
