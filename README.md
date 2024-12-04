@@ -121,8 +121,10 @@ wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-
 ```bash
 wget -O snell.sh --no-check-certificate https://git.io/Snell.sh && chmod +x snell.sh && ./snell.sh
 ```
-
-
+一键ssh改密钥+禁止密码
+```bash
+bash <(curl -fsSL git.io/key.sh) -og ClaraCora -p 2256 -d
+```
 ## 服务器测速脚本<a name="服务器测速脚本"></a>
 
 官网：bench.sh（秋水逸冰大佬）
