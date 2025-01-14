@@ -8,6 +8,7 @@
 [HY2安装](#HY2安装)</br>
 [SNELL安装](#SNELL安装)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
+[路由回程测试](#路由回程测试)</br>
 [X-UI 安装脚本](#X-UI安装脚本)</br>
 [Docker安装脚本](#Docker安装脚本)</br>
 [安装运行Nginx容器](#安装运行Nginx容器)</br>
@@ -143,6 +144,10 @@ bash <(curl -fsSL git.io/key.sh) -og ClaraCora -p 2256 -d
 三网路由回程
 ```bash
 curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sSf | sh
+```
+## 路由回程测试<a name="路由回程测试"></a>
+```bash
+curl nxtrace.org/nt | bash
 ```
 
 流媒体检测
