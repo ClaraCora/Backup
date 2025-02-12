@@ -9,6 +9,7 @@
 [SNELL安装](#SNELL安装)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
 [路由回程测试](#路由回程测试)</br>
+[IP质量检测](#IP质量检测)</br>
 [X-UI 安装脚本](#X-UI安装脚本)</br>
 [Docker安装脚本](#Docker安装脚本)</br>
 [安装运行Nginx容器](#安装运行Nginx容器)</br>
@@ -148,6 +149,11 @@ curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sS
 ## 路由回程测试<a name="路由回程测试"></a>
 ```bash
 curl nxtrace.org/nt | bash
+```
+
+## IP质量检测<a name="IP质量检测"></a>
+```bash
+bash <(curl -sL IP.Check.Place)
 ```
 
 流媒体检测
