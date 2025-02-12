@@ -7,6 +7,7 @@
 [3X-UI安装](#3X-UI安装)</br>
 [HY2安装](#HY2安装)</br>
 [SNELL安装](#SNELL安装)</br>
+[nezhaV1禁止webssh](#nezhaV1禁止webssh)</br>
 [服务器测速脚本](#服务器测速脚本)</br>
 [路由回程测试](#路由回程测试)</br>
 [IP质量检测](#IP质量检测)</br>
@@ -126,6 +127,10 @@ wget -O snell.sh --no-check-certificate https://git.io/Snell.sh && chmod +x snel
 一键ssh改密钥+禁止密码
 ```bash
 bash <(curl -fsSL git.io/key.sh) -og ClaraCora -p 2256 -d
+```
+## nezhaV1禁止webssh<a name="nezhaV1禁止webssh"></a>
+```bash
+sed -i 's/disable_command_execute: false/disable_command_execute: true/' /opt/nezha/agent/config.yml && systemctl restart nezha-agent
 ```
 ## 服务器测速脚本<a name="服务器测速脚本"></a>
 
