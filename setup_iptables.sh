@@ -1,5 +1,13 @@
 #!/bin/bash
 
+echo "=== 检查并安装 iptables ==="
+if ! command -v iptables &> /dev/null; then
+    echo "iptables 未安装，正在安装..."
+    sudo apt update && sudo apt install -y iptables
+else
+    echo "iptables 已安装，继续执行..."
+fi
+
 echo "=== 设定 iptables 规则 ==="
 
 # 确保 /etc/iptables 目录存在
