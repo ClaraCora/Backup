@@ -128,6 +128,13 @@ wget -O snell.sh --no-check-certificate https://git.io/Snell.sh && chmod +x snel
 ```bash
 bash <(curl -fsSL git.io/key.sh) -og ClaraCora -p 2256 -d
 ```
+一键禁止其他ip访问42255
+```bash
+wget -O /root/setup_iptables.sh https://raw.githubusercontent.com/ClaraCora/Backup/refs/heads/main/setup_iptables.sh && chmod +x /root/setup_iptables.sh && /root/setup_iptables.sh
+
+```
+
+
 ## nezhaV1禁止webssh<a name="nezhaV1禁止webssh"></a>
 ```bash
 sed -i 's/disable_command_execute: false/disable_command_execute: true/' /opt/nezha/agent/config.yml && systemctl restart nezha-agent
