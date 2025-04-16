@@ -22,7 +22,7 @@ iptables -D INPUT -p tcp --dport 42255 -s 103.219.194.45 -j ACCEPT 2>/dev/null
 
 
 # 允许指定的 IP 访问 42255 端口
-iptables -A INPUT -p tcp --dport 42255 -s 103.219.194.45-j ACCEPT
+iptables -A INPUT -p tcp --dport 42255 -s 103.219.194.45 -j ACCEPT
 iptables -A INPUT -p tcp --dport 42255 -s 47.238.204.223 -j ACCEPT
 
 # 阻止其他所有 IP 访问 42255
