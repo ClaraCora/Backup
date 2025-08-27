@@ -1,0 +1,225 @@
+#!name=CN Host Upstreams (Comprehensive)
+#!desc=按厂商将国内站点定向到相应上游：阿里→AliDNS，腾讯→DNSPod DoH，百度→180.76.76.76；局域网走syslib；.cn/.中国等兜底走syslib。与全局DoH并存，用于让DIRECT域名用国内DNS。
+#!author=C.
+#!category=DNS
+
+[Host]
+# ===================== 基础与引导 =====================
+# 这些是 DoH/DoT 解析器自身的 A/AAAA 映射，便于引导（保留/按需增补）
+dns.google                  = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844
+dns64.dns.google            = 2001:4860:4860::6464, 2001:4860:4860::64
+cloudflare-dns.com          = 104.16.249.249, 104.16.248.249, 2606:4700::6810:f8f9, 2606:4700::6810:f9f9
+1dot1dot1dot1.cloudflare-dns.com = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111
+one.one.one.one             = 1.1.1.1, 1.0.0.1, 2606:4700:4700::1001, 2606:4700:4700::1111
+dns.alidns.com              = 223.5.5.5, 223.6.6.6, 2400:3200:baba::1, 2400:3200::1
+doh.pub                     = 1.12.12.12, 120.53.53.53
+dot.pub                     = 1.12.12.12, 120.53.53.53
+doh.360.cn                  = 23.6.48.18, 112.65.69.15
+dot.360.cn                  = 101.198.198.198, 101.198.199.200, 101.198.192.33, 112.65.69.15
+dns.twnic.tw                = 101.101.101.101, 2001:de4::101, 2001:de4::102
+ordns.he.net                = 74.82.42.42, 2001:470:20::2
+
+# ===================== 局域网/管理页（本地解析） =====================
+*.lan                       = server:syslib
+*.local                     = server:syslib
+router.*                    = server:syslib
+unifi.local                 = server:syslib
+tplinkwifi.net              = server:syslib
+routerlogin.net             = server:syslib
+miwifi.com                  = server:syslib
+mediarouter.home            = server:syslib
+
+# ===================== Apple（可直指官方 DoH） =====================
+networking.apple            = server:https://doh.dns.apple.com/dns-query
+*.icloud.com                = server:https://doh.dns.apple.com/dns-query
+
+# ===================== 阿里系（首选 AliDNS，ECS 友好） =====================
+*.alibaba.com               = server:quic://dns.alidns.com
+*.alibaba-inc.com           = server:quic://dns.alidns.com
+*.china.alibaba.com         = server:quic://dns.alidns.com
+*.1688.com                  = server:quic://dns.alidns.com
+*.taobao.com                = server:quic://dns.alidns.com
+*.tmall.com                 = server:quic://dns.alidns.com
+*.alicdn.com                = server:quic://dns.alidns.com
+*.alikunlun.com             = server:quic://dns.alidns.com
+*.mmstat.com                = server:quic://dns.alidns.com
+*.tb.cn                     = server:quic://dns.alidns.com
+*.aliyun.*                  = server:quic://dns.alidns.com
+*.aliyuncs.com              = server:quic://dns.alidns.com
+*.aliyundrive.com           = server:quic://dns.alidns.com
+*.aliyundun.com             = server:quic://dns.alidns.com
+*.aliyuncdn.*               = server:quic://dns.alidns.com
+
+# ===================== 腾讯系（DNSPod DoH） =====================
+*.tencent.com               = server:https://doh.pub/dns-query
+*.qcloud.com                = server:https://doh.pub/dns-query
+*.tencentcloud.com          = server:https://doh.pub/dns-query
+*.tencentcloudapi.com       = server:https://doh.pub/dns-query
+*.myqcloud.com              = server:https://doh.pub/dns-query
+*.qq.com                    = server:https://doh.pub/dns-query
+*.qlogo.cn                  = server:https://doh.pub/dns-query
+*.qpic.cn                   = server:https://doh.pub/dns-query
+*.gtimg.cn                  = server:https://doh.pub/dns-query
+*.idqqimg.com               = server:https://doh.pub/dns-query
+*.weixin.qq.com             = server:https://doh.pub/dns-query
+*.wechat.com                = server:https://doh.pub/dns-query
+*.servicewechat.com         = server:https://doh.pub/dns-query
+*.tenpay.com                = server:https://doh.pub/dns-query
+url.cn                      = server:https://doh.pub/dns-query
+
+# ===================== 百度系（官方 180.76.76.76） =====================
+*.baidu                     = server:180.76.76.76
+*.baidu.com                 = server:180.76.76.76
+*.bdimg.com                 = server:180.76.76.76
+*.bdstatic.com              = server:180.76.76.76
+*.baidubce.*                = server:180.76.76.76
+*.bcebos.com                = server:180.76.76.76
+map.baidu.com               = server:180.76.76.76
+dwz.cn                      = server:180.76.76.76
+
+# ===================== 360 系（官方 DoH） =====================
+*.360.cn                    = server:https://doh.360.cn/dns-query
+*.so.com                    = server:https://doh.360.cn/dns-query
+*.qhimg.com                 = server:https://doh.360.cn/dns-query
+*.qhimgs.com                = server:https://doh.360.cn/dns-query
+*.qhres.com                 = server:https://doh.360.cn/dns-query
+*.qhmsg.com                 = server:https://doh.360.cn/dns-query
+*.yunpan.cn                 = server:https://doh.360.cn/dns-query
+
+# ===================== 字节系（国内上游） =====================
+*.douyin.com                = server:180.184.1.1
+*.douyinstatic.com          = server:180.184.1.1
+*.douyinvod.com             = server:180.184.1.1
+*.byteimg.com               = server:180.184.1.1
+*.byted-static.com          = server:180.184.1.1
+*.pstatp.com                = server:180.184.1.1
+*.snssdk.com                = server:180.184.1.1
+*.ixigua.com                = server:180.184.1.1
+*.volcengine.com            = server:180.184.1.1
+*.zijieimg.com              = server:180.184.1.1
+*.bytedns.net               = server:180.184.1.1
+
+# ===================== 网易系 =====================
+*.163.com                   = server:223.5.5.5
+*.126.net                   = server:223.5.5.5
+*.music.163.com             = server:223.5.5.5
+*.music.126.net             = server:223.5.5.5
+*.163yun.com                = server:223.5.5.5
+
+# ===================== 哔哩哔哩（按存储商定向） =====================
+upos-sz-mirrorali*.bilivideo.com = server:quic://dns.alidns.com
+upos-sz-mirrorbos*.bilivideo.com  = server:180.76.76.76
+upos-sz-mirrorcos*.bilivideo.com  = server:https://doh.pub/dns-query
+*.bilibili.com              = server:223.5.5.5
+*.hdslb.com                 = server:223.5.5.5
+*.acgvideo.com              = server:223.5.5.5
+
+# ===================== 门户/社区 =====================
+*.sina.com.cn               = server:223.5.5.5
+*.sina.cn                   = server:223.5.5.5
+*.weibo.com                 = server:223.5.5.5
+*.weibocdn.com              = server:223.5.5.5
+*.sohu.com                  = server:223.5.5.5
+*.ifeng.com                 = server:223.5.5.5
+*.zhihu.com                 = server:223.5.5.5
+*.zhimg.com                 = server:223.5.5.5
+*.douban.com                = server:223.5.5.5
+*.xiaohongshu.com           = server:223.5.5.5
+*.xhslink.com               = server:223.5.5.5
+tieba.baidu.com             = server:180.76.76.76
+
+# ===================== 电商 =====================
+*.jd.com                    = server:223.5.5.5
+*.jdstatic.com              = server:223.5.5.5
+*.360buyimg.com             = server:223.5.5.5
+*.pinduoduo.com             = server:223.5.5.5
+*.yangkeduo.com             = server:223.5.5.5
+*.vip.com                   = server:223.5.5.5
+*.vipstatic.com             = server:223.5.5.5
+*.vipimg.com                = server:223.5.5.5
+*.suning.com                = server:223.5.5.5
+*.dangdang.com              = server:223.5.5.5
+*.xiaomi.com                = server:223.5.5.5
+*.mi.com                    = server:223.5.5.5
+
+# ===================== 到家/本地生活 =====================
+*.meituan.com               = server:223.5.5.5
+*.meituan.net               = server:223.5.5.5
+*.dianping.com              = server:223.5.5.5
+*.ele.me                    = server:223.5.5.5
+*.eleme.cn                  = server:223.5.5.5
+
+# ===================== 出行/地图/旅游 =====================
+*.amap.com                  = server:223.5.5.5
+*.autonavi.com              = server:223.5.5.5
+*.ctrip.com                 = server:223.5.5.5
+*.ctripcdn.com              = server:223.5.5.5
+*.qunar.com                 = server:223.5.5.5
+*.fliggy.com                = server:quic://dns.alidns.com
+*.didiglobal.com            = server:223.5.5.5
+*.udache.com                = server:223.5.5.5
+*.xiaojukeji.com            = server:223.5.5.5
+
+# ===================== 金融/支付 =====================
+*.alipay.com                = server:quic://dns.alidns.com
+*.alipayobjects.com         = server:quic://dns.alidns.com
+*.95516.com                 = server:223.5.5.5
+*.unionpay.com              = server:223.5.5.5
+*.cmbchina.com              = server:223.5.5.5
+*.icbc.com.cn               = server:223.5.5.5
+*.ccb.com                   = server:223.5.5.5
+*.abchina.com               = server:223.5.5.5
+*.bankcomm.com              = server:223.5.5.5
+*.psbc.com                  = server:223.5.5.5
+
+# ===================== 邮箱/通信 =====================
+*.mail.163.com              = server:223.5.5.5
+*.yeah.net                  = server:223.5.5.5
+*.sina.com                  = server:223.5.5.5
+*.sohu.com                  = server:223.5.5.5
+*.139.com                   = server:223.5.5.5
+*.189.cn                    = server:223.5.5.5
+
+# ===================== 云/对象存储/开发者 =====================
+*.aliyun.com                = server:quic://dns.alidns.com
+*.qcloud.com                = server:https://doh.pub/dns-query
+*.tencentcloud.com          = server:https://doh.pub/dns-query
+*.myqcloud.com              = server:https://doh.pub/dns-query
+*.baidubce.com              = server:180.76.76.76
+*.bcebos.com                = server:180.76.76.76
+*.huaweicloud.com           = server:223.5.5.5
+*.myhuaweicloud.com         = server:223.5.5.5
+*.ksyun.com                 = server:223.5.5.5
+*.ksyuncdn.com              = server:223.5.5.5
+*.ucloud.cn                 = server:223.5.5.5
+*.ufileos.com               = server:223.5.5.5
+*.qiniu.com                 = server:223.5.5.5
+*.qbox.me                   = server:223.5.5.5
+*.qiniudn.com               = server:223.5.5.5
+*.qiniucdn.com              = server:223.5.5.5
+*.volcengine.com            = server:180.184.1.1
+*.bytecdntp.com             = server:180.184.1.1
+
+# ===================== 运营商/常用政务 =====================
+*.10010.com                 = server:223.5.5.5
+*.10086.cn                  = server:223.5.5.5
+*.189.cn                    = server:223.5.5.5
+*.gov.cn                    = server:syslib
+
+# ===================== 国内 Git/协作 =====================
+*.gitee.com                 = server:223.5.5.5
+*.coding.net                = server:223.5.5.5
+*.feishu.cn                 = server:223.5.5.5
+*.feishucdn.com             = server:223.5.5.5
+*.larksuite.com             = server:223.5.5.5
+*.dingtalk.com              = server:quic://dns.alidns.com
+
+# ===================== Kuaishou（快手） =====================
+*.kuaishou.com              = server:223.5.5.5
+*.gifshow.com               = server:223.5.5.5
+*.yximgs.com                = server:223.5.5.5
+*.ks-cdn.com                = server:223.5.5.5
+
+# ===================== 泛国内兜底（更弹性，不全绑 Ali） =====================
+*.gov.cn                    = server:syslib
+*.edu.cn                    = server:syslib
