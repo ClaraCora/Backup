@@ -187,6 +187,7 @@ tieba.baidu.com             = server:180.76.76.76
 *.myqcloud.com              = server:https://doh.pub/dns-query
 *.baidubce.com              = server:180.76.76.76
 *.bcebos.com                = server:180.76.76.76
+*.huawei.com                = server:223.5.5.5
 *.huaweicloud.com           = server:223.5.5.5
 *.myhuaweicloud.com         = server:223.5.5.5
 *.ksyun.com                 = server:223.5.5.5
