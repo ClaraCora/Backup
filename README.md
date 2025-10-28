@@ -1,6 +1,7 @@
 ## 目录 [自用命令，收集于网上各位大佬的教程]
 
 [3X-UI安装](#3X-UI安装)</br>
+[使用chrony](#使用chrony)</br>
 [HY2安装](#HY2安装)</br>
 [SNELL安装](#SNELL安装)</br>
 [SSH密钥配置](#SSH密钥配置)</br>
@@ -19,6 +20,13 @@
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 ```
+
+
+## 使用chrony（更精确校时）<a name="使用chrony"></a>
+```bash
+sudo bash -c "$(curl -Ls https://raw.githubusercontent.com/ClaraCora/Backup/refs/heads/main/chrony-setup.sh)"
+```
+
 
 ## HY2安装<a name="HY2安装"></a>
 HY2安装 
