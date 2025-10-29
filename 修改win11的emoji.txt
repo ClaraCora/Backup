@@ -1,0 +1,6 @@
+删除
+reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Emoji (TrueType)" /f
+
+
+添加
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Emoji (TrueType)" /d "Segoe UI Emoji with Twemoji 16.0.1.ttf" /f
