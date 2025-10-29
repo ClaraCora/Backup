@@ -114,9 +114,9 @@ wget https://raw.githubusercontent.com/Jimmyzxk/DNS-Alice-Unlock/refs/heads/main
 ```
 
 ## WIN11修改emoji<a name="WIN11修改emoji"></a>
-添加（先安装好库中字体文件Segoe UI Emoji with Twemoji 16.0.1.ttf）
+添加（先安装好库中字体文件Segoe.UI.Emoji.with.Twemoji.Flags.ttf）
 ```bash
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Emoji (TrueType)" /d "Segoe UI Emoji with Twemoji 16.0.1.ttf" /f
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Emoji (TrueType)" /d "Segoe.UI.Emoji.with.Twemoji.Flags.ttf" /f
 ```
 
 删除
