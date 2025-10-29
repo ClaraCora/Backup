@@ -12,6 +12,7 @@
 [路由回程测试](#路由回程测试)</br>
 [IP质量检测](#IP质量检测)</br>
 [流媒体检测](#流媒体检测)</br>
+[WIN11修改emoji](#WIN11修改emoji)</br>
 
 ---
 
@@ -111,3 +112,15 @@ bash <(curl -L -s media.ispvps.com)
 ```bash
 wget https://raw.githubusercontent.com/Jimmyzxk/DNS-Alice-Unlock/refs/heads/main/dns-unlock.sh && bash dns-unlock.sh
 ```
+
+## WIN11修改emoji<a name="WIN11修改emoji"></a>
+添加（先安装好库中字体文件Segoe UI Emoji with Twemoji 16.0.1.ttf）
+```bash
+reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Emoji (TrueType)" /d "Segoe UI Emoji with Twemoji 16.0.1.ttf" /f
+```
+
+删除
+```bash
+reg delete "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "Segoe UI Emoji (TrueType)" /f
+```
+
